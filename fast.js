@@ -4,11 +4,11 @@ const puppeteer = require('puppeteer');
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
 
-  await page.goto('https://flexstudent.nu.edu.pk/Login', { timeout: 60000 });
+  await page.goto('https://flexstudent.nu.edu.pk/Login', { timeout: 10000 });
 
   // Log in
-  await page.type('#m_inputmask_4', '23L-3095');
-  await page.type('#pass', 'MyW@rld1641');
+  await page.type('#m_inputmask_4', '-');
+  await page.type('#pass', '-');
 
   // Handle reCAPTCHA
   const frames = await page.frames();
